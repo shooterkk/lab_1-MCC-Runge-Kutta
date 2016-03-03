@@ -62,7 +62,7 @@ plt.grid(True)
 plt.subplot(313)
 plt.plot(x, y)
 plt.xlabel(r'$x$')
-plt.ylabel(r'$der(x)$')
+plt.ylabel(r'$\dot{x}$')
 plt.grid(True)
 
 
