@@ -10,14 +10,14 @@ t_max = 5
 t = np.arange(0, t_max, h)
 print(t[-1])
 
-b = 3
-w0 = 80
+b =1
+w0 = 5
 
 x0 = 1
 y0 = 1
 
 f0 =1
-w = 5
+w = 4.795
 
 
 
@@ -37,7 +37,7 @@ x[0] = x0
 y[0] = y0
 
 phi = atan(-y0/(w0*x0))
-A0 = x0/(cos(atan(phi)))
+#A0 = x0/(cos(atan(phi)))
 #x_real = A0*np.exp(-b*t)*np.cos(t*np.sqrt(w0*w0-b*b) + phi)
 
 for i in range(1, len(t)):
@@ -54,11 +54,14 @@ for i in range(1, len(t)):
 # plt.grid(True)
 omega = np.arange(0, 50, h)
 AChH = f0/np.sqrt((w0**2-omega**2)**2+4*(b*omega)**2)
+A = f0/np.sqrt((w0**2- w**2)**2+4*(b*w)**2)
+#print(A)
 
 plt.subplot(311)
 plt.plot(t, x)
 plt.xlabel(r'$t$')
 plt.ylabel(r'$x$')
+plt.legend(r'$A =${0}'.format(A))
 plt.grid(True)
 
 plt.subplot(312)
