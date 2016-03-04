@@ -7,62 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>400</height>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form1</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
-   <item row="2" column="1">
-    <widget class="QGroupBox" name="groupBox_3">
-     <property name="maximumSize">
-      <size>
-       <width>171</width>
-       <height>101</height>
-      </size>
-     </property>
-     <property name="title">
-      <string>Параметри графіку</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0" colspan="2">
-       <widget class="QLabel" name="label_8">
-        <property name="text">
-         <string>Права межа:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QSpinBox" name="ubound_input">
-        <property name="minimum">
-         <number>1</number>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_9">
-        <property name="text">
-         <string>Крок:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1" colspan="2">
-       <widget class="QDoubleSpinBox" name="step_input">
-        <property name="minimum">
-         <double>0.010000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>1.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.010000000000000</double>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="sizePolicy">
@@ -181,8 +132,8 @@
     <widget class="QGroupBox" name="groupBox_2">
      <property name="minimumSize">
       <size>
-       <width>161</width>
-       <height>111</height>
+       <width>179</width>
+       <height>180</height>
       </size>
      </property>
      <property name="title">
@@ -293,8 +244,94 @@
      </layout>
     </widget>
    </item>
+   <item row="1" column="0" rowspan="3">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="minimumSize">
+      <size>
+       <width>381</width>
+       <height>311</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="x_t_tab">
+      <attribute name="title">
+       <string>x(t)</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="x_t_layout"/>
+     </widget>
+     <widget class="QWidget" name="x_dx_tab">
+      <attribute name="title">
+       <string>x'(x)</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="x_dx_layout"/>
+     </widget>
+     <widget class="QWidget" name="afc_tab">
+      <attribute name="title">
+       <string>A(w)</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="afc_layout"/>
+     </widget>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="maximumSize">
+      <size>
+       <width>171</width>
+       <height>101</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Параметри графіку</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Права межа:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QSpinBox" name="ubound_input">
+        <property name="minimum">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Крок:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QDoubleSpinBox" name="step_input">
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
    <item row="3" column="1">
     <widget class="QGroupBox" name="groupBox_4">
+     <property name="maximumSize">
+      <size>
+       <width>171</width>
+       <height>120</height>
+      </size>
+     </property>
      <property name="title">
       <string>Шаблони</string>
      </property>
@@ -320,44 +357,14 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QRadioButton" name="other_rad">
+        <property name="text">
+         <string>Інше</string>
+        </property>
+       </widget>
+      </item>
      </layout>
-    </widget>
-   </item>
-   <item row="1" column="0" rowspan="3">
-    <widget class="QTabWidget" name="tabWidget">
-     <property name="minimumSize">
-      <size>
-       <width>381</width>
-       <height>291</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>381</width>
-       <height>291</height>
-      </size>
-     </property>
-     <property name="currentIndex">
-      <number>2</number>
-     </property>
-     <widget class="QWidget" name="x_t_tab">
-      <attribute name="title">
-       <string>x(t)</string>
-      </attribute>
-      <layout class="QHBoxLayout" name="x_t_layout"/>
-     </widget>
-     <widget class="QWidget" name="x_dx_tab">
-      <attribute name="title">
-       <string>x'(x)</string>
-      </attribute>
-      <layout class="QHBoxLayout" name="x_dx_layout"/>
-     </widget>
-     <widget class="QWidget" name="afc_tab">
-      <attribute name="title">
-       <string>A(w)</string>
-      </attribute>
-      <layout class="QHBoxLayout" name="afc_layout"/>
-     </widget>
     </widget>
    </item>
   </layout>
@@ -372,7 +379,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>497</x>
-     <y>325</y>
+     <y>309</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>
@@ -388,7 +395,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>497</x>
-     <y>344</y>
+     <y>328</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>
@@ -404,71 +411,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>497</x>
-     <y>363</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>299</x>
-     <y>199</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>delta_input</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>Form</receiver>
-   <slot>coef_change(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>97</x>
-     <y>48</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>299</x>
-     <y>199</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>w0_input</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>Form</receiver>
-   <slot>coef_change(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>176</x>
-     <y>48</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>299</x>
-     <y>199</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>w_input</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>Form</receiver>
-   <slot>coef_change(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>339</x>
-     <y>48</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>299</x>
-     <y>199</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>f0_input</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>Form</receiver>
-   <slot>coef_change(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>265</x>
-     <y>48</y>
+     <y>347</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>
@@ -500,7 +443,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>540</x>
-     <y>227</y>
+     <y>211</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>
@@ -512,7 +455,7 @@
    <sender>dx0_input</sender>
    <signal>textChanged(QString)</signal>
    <receiver>Form</receiver>
-   <slot>coef_change(QString)</slot>
+   <slot>initval_change(QString)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>519</x>
@@ -548,7 +491,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>517</x>
-     <y>258</y>
+     <y>242</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>
@@ -556,13 +499,77 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>w0_input</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>coef_edited(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>w_input</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>coef_edited(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>f0_input</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>coef_edited(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>delta_input</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>coef_edited(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>97</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
-  <slot>coef_change(QString)</slot>
   <slot>initval_change(QString)</slot>
   <slot>build_graph()</slot>
   <slot>limit_change(int)</slot>
   <slot>step_change(double)</slot>
   <slot>template_selected()</slot>
+  <slot>coef_edited(QString)</slot>
  </slots>
 </ui>
