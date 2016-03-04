@@ -8,7 +8,7 @@ from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QApplication, QDialog
 from PyQt5.uic import loadUiType
 from custom_canvas import StaticCanvas
-
+from play import calc_for_plot
 
 import numpy as np
 
@@ -32,7 +32,8 @@ class MainWindow(QDialog, form_class):
         self.f0 = 0
         self.w = 0
         self.left_bound = 0
-        self.right_bound = 0
+        self.right_bound = 1
+        self.step = 0.00001
         self.x0 = 0
         self.dx0 = 0
         self.update_coefficients()
@@ -46,7 +47,11 @@ class MainWindow(QDialog, form_class):
             self.w = np.float64(self.w_input.text())
         except:
             return
-        # plot graphs here
+        try:
+            x, y, A = calc_for_plot(self.right_bound, self.step, self.x0, self.dx0, self.delta,self.w0, self.f0, self.w)
+            self.x_t.plot(x[0], x[1])
+        except Exception as e:
+            print(e)
 
     @pyqtSlot()
     def template_selected(self):
