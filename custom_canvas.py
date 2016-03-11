@@ -26,7 +26,9 @@ class StaticCanvas(FigureCanvas):
         self.axes.clear()
 
     def plot(self, *args, **kwargs):
-        self.axes.plot(args[0],args[1], **kwargs)
+        self.axes.plot(*args,**kwargs)
+        self.axes.grid(True)
+        self.draw()
 
     def set_xlabel(self, s):
         self.axes.set_xlabel(s)

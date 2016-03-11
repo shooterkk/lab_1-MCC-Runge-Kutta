@@ -51,10 +51,13 @@ def calc_for_plot(t_max, h, x0, y0, b, w0, f0, w):
     # plt.ylabel(r'$x$')
     # plt.grid(True)
     omega = np.arange(0, 50, h)
-    AChH = f0/np.sqrt((w0**2-omega**2)**2+4*(b*omega)**2)
-    A = f0/np.sqrt((w0**2- w**2)**2+4*(b*w)**2)
+    if f0 == 0 :
+        AChH = omega*0
+    else:
+        AChH = f0/np.sqrt((w0**2-omega**2)**2+4*(b*omega)**2)
+    #A = f0/np.sqrt((w0**2- w**2)**2+4*(b*w)**2)
 
-    return (t, x), (t,y), (omega, A)
+    return (t, x), (x,y), (omega, AChH)
     # #print(A)
     #
     # plt.subplot(311)

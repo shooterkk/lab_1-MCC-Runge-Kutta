@@ -41,6 +41,9 @@ class MainWindow(QDialog, form_class):
     @pyqtSlot()
     def build_graph(self):
         try:
+            self.x_t.clear()
+            self.x_dx.clear()
+            self.afc.clear()
             self.delta = np.float64(self.delta_input.text())
             self.w0 = np.float64(self.w0_input.text())
             self.f0 = np.float64(self.f0_input.text())
@@ -50,6 +53,8 @@ class MainWindow(QDialog, form_class):
         try:
             x, y, A = calc_for_plot(self.right_bound, self.step, self.x0, self.dx0, self.delta,self.w0, self.f0, self.w)
             self.x_t.plot(x[0], x[1])
+            self.x_dx.plot(y[0], y[1])
+            self.afc.plot(A[0],A[1])
         except Exception as e:
             print(e)
 
@@ -57,7 +62,7 @@ class MainWindow(QDialog, form_class):
     def template_selected(self):
         sender = self.sender().objectName()
         if sender == 'harmonic_rad':
-            self.delta = 10
+            self.delta = 0
             self.w0 = 20
             self.f0 = 0
             self.w = 0
